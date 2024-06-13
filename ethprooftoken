@@ -1,0 +1,24 @@
+contract MyToken {
+
+    // public variables to store about rupee
+  string public tokenName = "Rupee";
+  string public tokenAbbrv = "rup";
+  unit public totalSupply = 0;
+    // mapping variable to balances of address
+
+      mapping(address=>unit) public balances;
+
+    // mint function to create new tokens and assign to the address
+      function mint(address _address, uint _value) public {
+        totalSupply += _value;
+        balance[_address] +=_value;
+        }
+
+    // burn function to destroy tokens from address
+      function burn(address _address, uint _value) public {
+        require(balances[_address]>=_value,"Insufficient balance to burn");
+        totalsupply-=_value;
+        balances[_address]-=_value;
+        }
+
+}
