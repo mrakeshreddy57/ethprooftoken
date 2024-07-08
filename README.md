@@ -1,8 +1,8 @@
 contract MyToken {
 
     // Public variables to store the details about the coin
-    string public tokenName = "DOGECOIN";
-    string public tokenAbbrv = "DOGE";
+    string public tokenName = "Rupee";
+    string public tokenAbbrv = "rup";
     uint public totalSupply = 0;
 
     // Mapping to store balances of addresses
